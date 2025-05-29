@@ -21,6 +21,8 @@ fun main(){
         val salvar = "insert into pessoa (id, cpf, nome)" +
                 "values (2,'111.111.111-11','Gustavo')"
 
+        val salvarBanco = conexao.createStatement().execute(salvar)
+
         val query : ResultSet = conexao.createStatement().executeQuery("" +
         "SELECT * FROM pessoa")
 
